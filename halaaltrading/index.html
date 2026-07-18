@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ur">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HALAL TRADING EXPERT</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    color:#f1f5f9;
+    overflow-x:hidden;
+    
+    /* Deep Islamic Charcoal & Emerald Green Radial Background */
+    background: radial-gradient(circle at center, #021a0e 0%, #050b08 100%);
+}
+
+.wrapper{
+    width:100%;
+    max-width:440px;
+    text-align:center;
+}
+
+/* Premium Royal Islamic Gold-Glow Card */
+.card{
+    position:relative;
+    overflow:hidden;
+    padding:35px 25px;
+    border-radius:24px; 
+    background: rgba(8, 26, 17, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(212, 175, 55, 0.35); /* Premium Metallic Gold Border */
+    box-shadow: 0 25px 60px rgba(0,0,0,0.8), 0 0 35px rgba(212, 175, 55, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Emerald Green & Gold Ambient Light from Top-Left */
+.card::before{
+    content:"";
+    position:absolute;
+    width:220px;
+    height:220px;
+    background:#d4af37;
+    border-radius:50%;
+    filter:blur(120px);
+    opacity:.15;
+    top:-90px;
+    left:-90px;
+}
+
+.profile{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #d4af37; /* Metallic Gold Border */
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+    position:relative;
+    z-index:2;
+}
+
+.verify{
+    margin-top:18px;
+    color:#d4af37; /* Royal Gold */
+    font-size:13px;
+    font-weight:700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.verify i{
+    color:#d4af37;
+    margin-right: 4px;
+}
+
+h2{
+    margin-top:12px;
+    font-size:26px;
+    color:#ffffff;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+}
+
+.urdu-title {
+    font-size: 20px;
+    display: block;
+    margin-top: 5px;
+    color: #d4af37;
+    font-weight: 500;
+}
+
+.stats{
+    margin-top:20px;
+    color:#cbd5e1;
+    font-size:13.5px;
+    font-weight:500;
+    background: rgba(212, 175, 55, 0.05); /* Light Gold Tint */
+    padding: 15px;
+    border-radius: 14px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    text-align: left;
+}
+
+/* Supporting Right-to-Left alignment for Urdu text portions if needed */
+.rtl-text {
+    text-align: right;
+    direction: rtl;
+}
+
+.stats span {
+    color: #d4af37; /* Highlighted Gold */
+    font-weight: 700;
+}
+
+.text{
+    margin-top:20px;
+    line-height:1.6;
+    font-size:15px;
+    color:#e2e8f0;
+}
+
+.benefits{
+    margin-top:22px;
+    background:rgba(255,255,255,0.02);
+    border:1px solid rgba(255,255,255,0.05);
+    border-radius:14px;
+    padding:15px;
+    text-align:left;
+}
+
+.benefits div{
+    padding:12px 0;
+    color:#e2e8f0;
+    font-size:14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+
+.benefits div:last-child {
+    border-bottom: none;
+}
+
+/* High CTR Vibrant Emerald Green to Deep Forest Green Button (Islamic Vibe) */
+.btn{
+    margin-top:24px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    width:100%;
+    padding:16px;
+    border-radius:12px;
+    text-decoration:none;
+    color:#ffffff;
+    font-size:17px;
+    font-weight:800;
+    letter-spacing: 0.5px;
+    background: linear-gradient(135deg, #10b981, #047857); /* Emerald to Forest Green */
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.35);
+    transition: all .3s ease;
+    position:relative;
+    overflow:hidden;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+    box-shadow: 0 12px 30px rgba(16, 185, 129, 0.5);
+}
+
+.btn::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition:.6s;
+}
+
+.btn:hover::before{
+    left:100%;
+}
+
+.disclaimer{
+    margin-top:22px;
+    font-size:11px;
+    line-height:1.7;
+    color:#8ba396;
+    padding:0 5px;
+    text-align: justify;
+}
+
+@media(max-width:480px){
+    .card{ padding:30px 18px; }
+    h2{ font-size:22px; }
+    .urdu-title { font-size:18px; }
+    .profile{ width:95px; height:95px; }
+    .btn{ font-size:15px; padding:15px; }
+}
+</style>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1967180443905692');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1967180443905692&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<div class="card">
+
+<img src="https://github.com/vishalme9694-sudo/hajisultan/releases/download/haji/haji.jpg" class="profile" alt="Profile">
+
+<div class="verify">
+<i class="fas fa-star-and-crescent"></i> HALAL TRADING LEARNING COMMUNITY
+</div>
+
+<h2>HAJI SULTAN HALAL TRADING EXPERT <span class="urdu-title">حلال ٹریڈنگ کمیونٹی</span></h2>
+
+<div class="stats">
+<div>🟢 <span>Beginners</span> کے لیے بہت ہی آسان اور سادھہ لرننگ</div>
+<div>🌍 Active Muslim Traders & Investors Community</div>
+<div>✨ Daily Halal Stock Updates & Market Analysis</div>
+</div>
+
+<div class="text">
+Stock Market کو شریعت کے اصولوں کے مطابق سیکھنے (Halal Investing) کے لیے سب سے بہترین مسلم کمنیوٹی۔
+</div>
+
+<a class="btn" id="telegramBtn" href="connecting.html">
+<i class="fas fa-book-quran"></i>
+مفت کمیونٹی میں شامل ہوں | JOIN NOW
+<i class="fas fa-arrow-right"></i>
+</a>
+
+<div class="benefits">
+<div><i class="fas fa-chart-line" style="color: #d4af37;"></i> Daily Halal Market Updates</div>
+<div><i class="fas fa-square-poll-vertical" style="color: #60a5fa;"></i> Shariah Screening & Halal Stocks Info</div>
+<div><i class="fas fa-graduation-cap" style="color: #f87171;"></i> Beginners کے لیے بالکل آسان اور سمپل ایکسپلینیشن</div>
+<div><i class="fas fa-users" style="color: #38bdf8;"></i> Full Community Support & Islamic Guidance</div>
+<div><i class="fas fa-lightbulb" style="color: #fbbf24;"></i> Live Market Knowledge & Risk Management</div>
+</div>
+
+</div>
+
+<div class="disclaimer">
+<strong>گزارش (Disclaimer):</strong> یہ پلیٹ فارم صرف تعلیمی اور معلوماتی مقاصد (Educational Purposes) کے لیے ہے۔ ہم کسی بھی قسم کی انویسٹمنٹ، ٹریڈنگ یا فائنینشل ایڈوائس (Financial Advice) نہیں دیتے ہیں۔ مارکیٹ میں کوئی بھی فیصلہ لینے سے پہلے اپنی خود کی ریسرچ (Research) ضرور کریں یا اپنے فائنینشل ایڈوائزر سے مشورہ لیں۔
+</div>
+
+</div>
+
+<script>
+document.getElementById("telegramBtn").addEventListener("click", function(e){
+    e.preventDefault();
+    const bridgePageLink = this.href;
+
+    // Meta Pixel Event Tracking
+    fbq('track', 'Contact', {
+        content_name: 'Telegram Halal Community',
+        button_click: true
+    });
+
+    setTimeout(() => {
+        window.location.href = bridgePageLink;
+    }, 300);
+});
+</script>
+
+</body>
+</html>
